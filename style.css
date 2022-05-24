@@ -1,0 +1,66 @@
+body{   
+}
+
+.container{
+  width: 300px;
+  background-color: red;
+  display: flex;
+  align-items: flex-start;
+flex-direction: column;
+border-radius: 5px;
+
+}
+
+  .city-search .button{
+    border-radius: 50px;
+  }
+
+textarea{
+  resize: none;
+}
+
+#search-bar{
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+
+#weather-head{
+  color: whitesmoke;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, rgba(19, 30, 65, 0.609) , rgb(29, 140, 173));
+  border-radius: 5px;
+}
+
+#feedback {
+  font-size: 1.4em;
+}
+
+#selectable .ui-selecting {
+  background: #feca40;
+}
+
+#selectable .ui-selected {
+  background: #f39814;
+  color: white;
+}
+
+#selectable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+#selectable li {
+  margin: 3px;
+  padding: 0.4em;
+  font-size: 1.4em;
+  height: 18px;
+  border-radius: 5px;
+}
