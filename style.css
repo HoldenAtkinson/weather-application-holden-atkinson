@@ -1,57 +1,61 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
-    cursor: pointer;
-    margin-bottom: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 input {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-    padding: 50px;
+  padding: 50px;
 }
 
 #weather-head {
   color: whitesmoke;
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
     to left,
-    rgba(19, 30, 65, 0.609),
-    rgb(29, 140, 173)
+    rgb(12, 34, 104),
+    rgb(53, 109, 230)
   );
   border-radius: 5px;
+  font-weight: 900;
+  margin-bottom: 10px;
 }
 
 .container {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   border-bottom: solid black 1px;
+  width: 200px;
+  position: relative;
 }
 
-.container h2{
-    font-weight: 600;
+.container h2 {
+  font-weight: 600;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 textarea {
@@ -59,16 +63,26 @@ textarea {
 }
 
 #search-bar {
-  margin: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  border: 1px solid gray;
 }
 
-.search-btn{
-    border-radius: 5px;
-    background-color: red;
-    border: none;
+.search-btn {
+  display: flex;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(58, 143, 235);
+  border: none;
+  height: 30px;
+  width: 200px;
+  padding: 0.4em;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
 }
-
 
 #feedback {
   font-size: 1.4em;
@@ -84,16 +98,145 @@ textarea {
 }
 
 #selectable {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   list-style-type: none;
-  margin: 0;
+  margin-left: -19px;
   padding: 0;
-  width: 150px;
+  width: 200px;
 }
 
 #selectable li {
-  margin: 3px;
+  display: flex;
+  margin: 10px;
   padding: 0.4em;
   font-size: 1.4em;
   height: 18px;
   border-radius: 5px;
+  background-color: rgb(200, 200, 200);
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  width: 200px;
+}
+
+.day-forecast {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 280px;
+  border: 1px solid black;
+  width: 75%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.day-forecast .data p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.five-day-head{
+  position:absolute ;
+  top: 200px;
+  left: 280px;
+}
+
+.five-day{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 400px;
+  left: 280px;
+
+}
+
+.day-one{
+  padding-left: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: rgb(51, 57, 73);
+  color: white;
+}
+
+.day-one h2{
+  margin: 10px 10px;
+}
+
+.day-one p{
+  margin: 10px 10px;
+}
+
+.day-two{
+  padding-left: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: rgb(51, 57, 73);
+  color: white;
+}
+
+.day-two h2{
+  margin: 10px 10px;
+}
+
+.day-two p{
+  margin: 10px 10px;
+}
+
+.day-three{
+  padding-left: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: rgb(51, 57, 73);
+  color: white;
+}
+
+.day-three h2{
+  margin: 10px 10px;
+}
+
+.day-three p{
+  margin: 10px 10px;
+}
+
+.day-four{
+  padding-left: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: rgb(51, 57, 73);
+  color: white;
+}
+
+.day-four h2{
+  margin: 10px 10px;
+}
+
+.day-four p{
+  margin: 10px 10px;
+}
+
+.day-five{
+  padding-left: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: rgb(51, 57, 73);
+  color: white;
+}
+
+.day-five h2{
+  margin: 10px 10px;
+}
+
+.day-five p{
+  margin: 10px 10px;
 }
