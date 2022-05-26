@@ -62,7 +62,7 @@ textarea {
   resize: none;
 }
 
-#search-bar {
+input[type='text'] {
   margin-bottom: 10px;
   border-radius: 5px;
   height: 25px;
@@ -70,7 +70,7 @@ textarea {
   border: 1px solid gray;
 }
 
-.search-btn {
+input[type='submit'] {
   display: flex;
   color: white;
   border-radius: 5px;
@@ -82,6 +82,7 @@ textarea {
   font-size: 1em;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #feedback {
@@ -142,27 +143,30 @@ textarea {
 
 .five-day-head{
   position:absolute ;
-  top: 200px;
+  top: 400px;
   left: 280px;
+  margin-bottom: 20px;
 }
 
 .five-day{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-right: 10px;
   position: absolute;
-  top: 400px;
+  top: 450px;
   left: 280px;
+  
 
 }
 
 .day-one{
   padding-left: 10px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
+  margin-right: 20px;
 }
 
 .day-one h2{
@@ -180,6 +184,8 @@ textarea {
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
+  margin-right: 20px;
+
 }
 
 .day-two h2{
@@ -197,6 +203,8 @@ textarea {
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
+  margin-right: 20px;
+
 }
 
 .day-three h2{
@@ -214,6 +222,8 @@ textarea {
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
+  margin-right: 20px;
+
 }
 
 .day-four h2{
@@ -231,6 +241,7 @@ textarea {
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
+  margin-right: 20px;
 }
 
 .day-five h2{
