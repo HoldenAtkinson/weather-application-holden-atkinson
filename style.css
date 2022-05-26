@@ -62,7 +62,7 @@ textarea {
   resize: none;
 }
 
-input[type='text'] {
+#search-bar {
   margin-bottom: 10px;
   border-radius: 5px;
   height: 25px;
@@ -70,7 +70,7 @@ input[type='text'] {
   border: 1px solid gray;
 }
 
-input[type='submit'] {
+.search-btn {
   display: flex;
   color: white;
   border-radius: 5px;
@@ -82,7 +82,6 @@ input[type='submit'] {
   font-size: 1em;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 #feedback {
@@ -241,7 +240,7 @@ input[type='submit'] {
   flex-direction: column;
   background-color: rgb(51, 57, 73);
   color: white;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .day-five h2{

@@ -2,8 +2,8 @@ $( function() {
     $( "#selectable" ).selectable();
   } );
 
-  const button = document.querySelector('.button')
-  const inputBox = document.querySelector('.inputValue')
+  const submitButton = document.querySelector('.search-btn')
+  const inputBox = document.querySelector('.search-bar')
   const cityName = document.querySelector('.city-name')
   const temp = document.querySelector('.temp')
   const wind = document.querySelector('.wind')
@@ -12,9 +12,9 @@ $( function() {
 
 
 
-  button.addEventListener('click',function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=1e1abfef4862065d738fdd48a265724d')
-  .then(response=>response.json())
+  submitButton.addEventListener('click',function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputBox.value+'&appid=1e1abfef4862065d738fdd48a265724d')
+  .then(Response=>Response.json())
   .then(data=>console.log(data))
 })
 
