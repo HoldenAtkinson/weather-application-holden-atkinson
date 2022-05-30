@@ -1,22 +1,27 @@
-$( function() {
-    $( "#selectable" ).selectable();
-  } );
+var button = document.querySelector('.button')
+var inputValue = document.querySelector('.inputValue')
+var city = document.querySelector('.name')
+var temp = document.querySelector('.temp')
+var humidity = document.querySelector('.humidity')
+var wind = document.querySelector('.wind')
 
-  const submitButton = document.querySelector('.search-btn')
-  const inputBox = document.querySelector('.search-bar')
-  const cityName = document.querySelector('.city-name')
-  const temp = document.querySelector('.temp')
-  const wind = document.querySelector('.wind')
-  const humidity = document.querySelector('.humidity')
-  const uvIndex = document.querySelector('.uv-index')
+button.addEventListener('click', function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=1e1abfef4862065d738fdd48a265724d&units=imperial')
+.then(Response=>Response.json())
+.then(data=>{
+  var nameValue = data['name'];
+    var tempValue = data['main']['temp'];
+    var humidityValue = data['main']['humidity'];
+    var windValue = data['wind']['speed'];
 
+    city.innerHTML = nameValue;
+    temp.innerHTML = tempValue;
+    humidity.innerHTML = humidityValue;
+    wind.innerHTML = windValue;
+} )
 
-
-  submitButton.addEventListener('click',function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputBox.value+'&appid=1e1abfef4862065d738fdd48a265724d')
-  .then(Response=>Response.json())
-  .then(data=>console.log(data))
-})
+.catch(err => alert("Wrong city name! "))
+} )
 
 
 

@@ -1,89 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>jQuery UI Selectable - Default functionality</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script>
-      $(function () {
-        $("#selectable").selectable();
-      });
-    </script>
   </head>
+
+  <script>
+    $(function () {
+      $("#selectable").selectable();
+    });
+  </script>
+
   <body>
-    <div id="weather-head">
-      <h1>Weather Dashboard</h1>
-    </div>
-
-    
     <div class="container">
-      <h2>Search for a City:</h2>
-      <form>
-        <input class="search-bar" type="text" placeholder="search for a city">
-        <button type="click" class="search-btn">Search</button>
-      </form>
-    </div>
-    <ol id="selectable">
-      <li class="ui-widget-content">Salt Lake</li>
-      <li class="ui-widget-content">Hong Kong</li>
-      <li class="ui-widget-content">London</li>
-      <li class="ui-widget-content">Tokyo</li>
-      <li class="ui-widget-content">Anthens</li>
-      <li class="ui-widget-content">Paris</li>
-      <li class="ui-widget-content">Vancouver</li>
-    </ol>
-    <div class="day-forecast">
-      <div class="data">
-      <h2 class="city-name">Mount Pleasant</h2>
-      <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      <p class="uv-index">UV Index:0.47</p>
+      <h2 class="website-header">Weather Dashboard</h2>
+      <h2 class="search-header">Search for a City:</h2>
+      <div class="input">
+        <input type="text" class="inputValue" placeholder="enter a city" />
+        <input type="submit" value="Submit" class="button" />
+      </div>
+      <ol id="selectable">
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content"></li>
+        <li class="ui-widget-content">Hong Kong</li>
+      </ol>
+
+      <div class="current">
+          <h1 class="name"></h1>
+          <p class="temp"></p>
+        <p class="humidity"></p>
+        <p class="wind"></p>
       </div>
     </div>
 
-    <div class="five-day-head">
-      <h2>5-Day Forecast:</h2>
-    </div>
-    <div class="five-day">
-      <div class="day-one">
-        <h2>3/31/2022</h2>
-        <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      </div>
-      <div class="day-two">
-        <h2>3/31/2022</h2>
-        <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      </div>
-      <div class="day-three">
-        <h2>3/31/2022</h2>
-        <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      </div>
-      <div class="day-four">
-        <h2>3/31/2022</h2>
-        <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      </div>
-      <div class="day-five">
-        <h2>3/31/2022</h2>
-        <p class="temp">Temp: 42 celcius</p>
-      <p class="wind"> Wind: 6 MPH</p>
-      <p class="humidity">Humidity: 50%</p>
-      </div>
-    </div>
-    
+    <script src="script.js"></script>
   </body>
 </html>
