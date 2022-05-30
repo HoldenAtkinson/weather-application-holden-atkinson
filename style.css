@@ -39,7 +39,8 @@ body {
   margin-left: 30px;
   margin-top: 0px;
   margin-bottom: 50px;
-  height: 200px;
+  height: 100px;
+  justify-content: space-around;
   border-bottom: 1px solid black;
 }
 
@@ -71,6 +72,81 @@ button{
   border: 1px solid black;
   height: 200px;
   padding:20px
+}
+
+.five-day-forecast{
+  display: flex;
+  flex-direction: row;
+}
+
+.five-day-header{
+  position: absolute;
+  top: 38%;
+  left: 22%;
+}
+
+.day-one-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 45%;
+  left: 22%;
+  width: 125px;
+  height: 100px;
+  background-color: gray;
+}
+.day-two-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 45%;
+  left: 33%;
+  width: 125px;
+  height: 100px;
+  background-color: gray;
+}
+
+.day-three-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 45%;
+  left: 44%;
+  width: 125px;
+  height: 100px;
+  background-color: gray;
+}
+
+.day-four-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 45%;
+  left: 55%;
+  width: 125px;
+  height: 100px;
+  background-color: gray;
+}
+
+.day-five-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 45%;
+  left: 66%;
+  width: 125px;
+  height: 100px;
+  background-color: gray;
 }
 
 #selectable .ui-selecting {
