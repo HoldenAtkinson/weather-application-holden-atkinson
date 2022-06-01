@@ -1,57 +1,126 @@
-var button = document.querySelector('.button')
-var inputValue = document.querySelector('.inputValue')
-var city = document.querySelector('.name')
-var temp = document.querySelector('.temp')
-var humidity = document.querySelector('.humidity')
-var wind = document.querySelector('.wind')
-var icon = document.querySelector('.icon')
-// var dayOneTemp = document.querySelector('.day-one-temp')
-// var dayOneWind = document.querySelector('')
-// var dayOneHumidity = document.querySelector('')
-// var dayTwoTemp = document.querySelector('.day-two-temp')
-// var dayTwoWind= document.querySelector('')
-// var dayTwoHumidity = document.querySelector('')
-// var dayThreeTemp = document.querySelector('.day-one-temp')
-// var dayThreeWind = document.querySelector('')
-// var dayThreeHumidity = document.querySelector('')
-// var dayFourTemp = document.querySelector('.day-one-temp')
-// var dayFourWind = document.querySelector('')
-// var dayFourHumidity = document.querySelector('')
-// var dayFiveTemp = document.querySelector('.day-one-temp')
-// var dayFiveWind = document.querySelector('')
-// var dayFiveHumidity = document.querySelector('')
+var button = document.querySelector(".button");
+var inputValue = document.querySelector(".inputValue");
+var city = document.querySelector(".name");
+var dateEl = document.querySelector(".date");
+var temp = document.querySelector(".temp");
+var humidity = document.querySelector(".humidity");
+var wind = document.querySelector(".wind");
+var icon = document.querySelector(".icon");
+var dayOneDate = document.querySelector('.day-one-date')
+var dayOneTemp = document.querySelector(".day-one-temp");
+var dayOneWind = document.querySelector('.day-one-wind')
+var dayOneHumidity = document.querySelector('.day-one-humidity')
+var dayTwoDate = document.querySelector('.day-two-date')
+var dayTwoTemp = document.querySelector('.day-two-temp')
+var dayTwoWind= document.querySelector('.day-two-wind')
+var dayTwoHumidity = document.querySelector('.day-two-humidity')
+var dayThreeDate = document.querySelector('.day-three-date')
+var dayThreeTemp = document.querySelector('.day-three-temp')
+var dayThreeWind = document.querySelector('.day-three-wind')
+var dayThreeHumidity = document.querySelector('.day-three-humidity')
+var dayFourDate = document.querySelector('.day-four-date')
+var dayFourTemp = document.querySelector('.day-four-temp')
+var dayFourWind = document.querySelector('.day-four-wind')
+var dayFourHumidity = document.querySelector('.day-four-humidity')
+var dayFiveDate = document.querySelector('.day-five-date')
+var dayFiveTemp = document.querySelector('.day-five-temp')
+var dayFiveWind = document.querySelector('.day-five-wind')
+var dayFiveHumidity = document.querySelector('.day-five-humidity')
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+button.addEventListener("click", function () {
+  fetch(
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+      inputValue.value +
+      "&appid=1e1abfef4862065d738fdd48a265724d&units=imperial"
+  )
+    .then((Response) => Response.json())
+    .then((data) => {
+      var nameValue = data["name"];
+      var iconValue = data["weather"]["icon"];
+      var tempValue = data["main"]["temp"];
+      var humidityValue = data["main"]["humidity"];
+      var windValue = data["wind"]["speed"];
+
+      city.innerHTML = nameValue + iconValue;
+      icon.innerHTML = iconValue;
+      temp.innerHTML = "Temperature:" + tempValue + "°F";
+      humidity.innerHTML = "Humidity:" + humidityValue + "%";
+      wind.innerHTML = "Wind Speed:" + windValue + "mp/h";
+    })
+
+    .catch((err) => alert("Wrong city name! "));
+
+    window.localStorage.setItem('name','Karl');
+    
+
+  });
+  
+  button.addEventListener("click", function () {
+    fetch(
+      "https://api.openweathermap.org/data/2.5/forecast?q=" +
+      inputValue.value +
+      "&appid=1e1abfef4862065d738fdd48a265724d&units=imperial"
+      )
+      .then((Response) => Response.json())
+      .then((data) => {
+        var dayOneDateValue = data ['list']['0']['dt_txt']
+        var dayOneTempValue = data['list']['0']['main']['temp']
+        var dayOneWindValue = data ['list']['0']['wind']['speed']
+        var dayOneHumidityValue = data ['list']['0']['main']['humidity']
+        var dayTwoDateValue = data ['list']['10']['dt_txt']
+        var dayTwoTempValue = data ['list']['10']['main']['temp']
+        var dayTwoWindValue = data ['list']['10']['wind']['speed']
+        var dayTwoHumidityValue = data ['list']['10']['main']['humidity']
+        var dayThreeDateValue = data ['list']['16']['dt_txt']
+        var dayThreeTempValue = data ['list']['16']['main']['temp']
+        var dayThreeWindValue = data ['list']['16']['wind']['speed']
+        var dayThreeHumidityValue = data ['list']['16']['main']['humidity']
+        var dayFourDateValue = data ['list']['24']['dt_txt']
+        var dayFourTempValue = data ['list']['24']['main']['temp']
+        var dayFourWindValue = data ['list']['24']['wind']['speed']
+        var dayFourHumidityValue = data ['list']['24']['main']['humidity']
+        var dayFiveDateValue = data ['list']['32']['dt_txt']
+        var dayFiveTempValue = data ['list']['32']['main']['temp']
+      var dayFiveWindValue = data ['list']['32']['wind']['speed']
+      var dayFiveHumidityValue = data ['list']['32']['main']['humidity']
+      
+      dayOneDate.innerHTML = dayOneDateValue;
+      dayOneTemp.innerHTML = 'Temp:'+ dayOneTempValue + '°F';
+      dayOneWind.innerHTML = "Wind:" + dayOneWindValue + "mp/h";
+      dayOneHumidity.innerHTML = "Humidity:" + dayOneHumidityValue + "%";
+      dayTwoDate.innerHTML = dayTwoDateValue;
+      dayTwoTemp.innerHTML = 'Temp:'+ dayTwoTempValue + '°F';
+      dayTwoWind.innerHTML = "Wind:" + dayTwoWindValue + "mp/h";
+      dayTwoHumidity.innerHTML = "Humidity:" + dayTwoHumidityValue + "%";
+      dayThreeDate.innerHTML = dayThreeDateValue;
+      dayThreeTemp.innerHTML = 'Temp:'+ dayThreeTempValue + '°F';
+      dayThreeWind.innerHTML = "Wind:" + dayThreeWindValue + "mp/h";
+      dayThreeHumidity.innerHTML = "Humidity:" + dayThreeHumidityValue + "%";
+      dayFourDate.innerHTML = dayFourDateValue;
+      dayFourTemp.innerHTML = 'Temp:'+ dayFourTempValue + '°F';
+      dayFourWind.innerHTML = "Wind:" + dayFourWindValue + "mp/h";
+      dayFourHumidity.innerHTML = "Humidity:" + dayFourHumidityValue + "%";
+      dayFiveDate.innerHTML = dayFiveDateValue;
+      dayFiveTemp.innerHTML = 'Temp:'+ dayFiveTempValue + '°F';
+      dayFiveWind.innerHTML = "Wind:" + dayFiveWindValue + "mp/h";
+      dayFiveHumidity.innerHTML = "Humidity:" + dayFiveHumidityValue + "%";
+      
+      
+      
 
 
-
-button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=1e1abfef4862065d738fdd48a265724d&units=imperial')
-.then(Response=>Response.json())
-.then(data=> console.log(data)
-//   {
-  //   var nameValue = data['name'];
-//   var iconValue = data['weather']['icon'];
-//     var tempValue = data['main']['temp'];
-//     var humidityValue = data['main']['humidity'];
-//     var windValue = data['wind']['speed'];
-
-
-//     city.innerHTML = nameValue + iconValue;
-//     icon.innerHTML = iconValue;
-//     temp.innerHTML =  "Temperature:" + tempValue + "°F";
-//     humidity.innerHTML = "Humidity:" + humidityValue + "%";
-//     wind.innerHTML = "Wind Speed:" + windValue + "mp/h";
-// } 
-)
-
-.catch(err => alert("Wrong city name! "))
-} )
-
-button.addEventListener('click', function(){
-  fetch('https://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+'&appid=1e1abfef4862065d738fdd48a265724d&units=imperial')
-  .then(Response => Response.json())
-  .then(data => console.log(data))
-})
-
-
-
-
+    });
+  });
+  
+  
+  
+  // setInterval(()=>{
+  //   const time = new Date();
+  //   const month = time.getMonth;
+  //   const date = time.getDate;
+  //   const year = time.getFullYear;
+  
+  //   dateEl.innerHTML = months[month] + date + year
+  
+  // }, 1000);

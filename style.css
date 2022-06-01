@@ -38,10 +38,14 @@ body {
   width: 250px;
   margin-left: 30px;
   margin-top: 0px;
-  margin-bottom: 50px;
   height: 100px;
   justify-content: space-around;
   border-bottom: 1px solid black;
+}
+
+input {
+  background-color: red;
+
 }
 
 .input[type="text"] {
@@ -93,8 +97,8 @@ button{
   position: fixed;
   top: 45%;
   left: 22%;
-  width: 125px;
-  height: 100px;
+  width: 150px;
+  height: 175px;
   background-color: gray;
 }
 .day-two-container{
@@ -104,9 +108,9 @@ button{
   justify-content: space-between;
   position: fixed;
   top: 45%;
-  left: 33%;
-  width: 125px;
-  height: 100px;
+  left: 35%;
+  width: 150px;
+  height: 175px;
   background-color: gray;
 }
 
@@ -117,9 +121,9 @@ button{
   justify-content: space-between;
   position: fixed;
   top: 45%;
-  left: 44%;
-  width: 125px;
-  height: 100px;
+  left: 48%;
+  width: 150px;
+  height: 175px;
   background-color: gray;
 }
 
@@ -130,9 +134,9 @@ button{
   justify-content: space-between;
   position: fixed;
   top: 45%;
-  left: 55%;
-  width: 125px;
-  height: 100px;
+  left: 61%;
+  width: 150px;
+  height: 175px;
   background-color: gray;
 }
 
@@ -143,9 +147,9 @@ button{
   justify-content: space-between;
   position: fixed;
   top: 45%;
-  left: 66%;
-  width: 125px;
-  height: 100px;
+  left: 74%;
+  width: 150px;
+  height: 175px;
   background-color: gray;
 }
 
@@ -163,12 +167,17 @@ button{
 }
 
 #selectable li {
-  margin: 10px;
+  margin: 15px;
+  display: flex;
   font-size: 16px;
-  height: 20px;
+  height: 30px;
   border-radius: 5px;
   width: 250px;
   margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
 .temp-writing{
